@@ -73,3 +73,16 @@ $ docker-compose -f docker-compose.prod.yml up -d --build
 ### Demo
 
 https://nextgatetechtest-26090.web.app
+
+### App ScreenShots
+
+#### Dashboard Screens
+<img alt="App" src="./screenshots/dashboard1.png">
+<img alt="App" src="./screenshots/dashboard2.png">
+
+#### Database Screens
+<img alt="App" src="./screenshots/db1.png">
+<img alt="App" src="./screenshots/db2.png">
+
+### Original CSV Screen
+<img alt="App" src="./screenshots/csv.png">
