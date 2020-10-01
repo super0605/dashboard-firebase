@@ -57,7 +57,7 @@ const NavMenu = () => {
   const { sidebarCollapsed } = useSelector(state => state.ui);
 
   return (
-    <NavMenuContainer expandIconPosition="right" defaultActiveKey={["2"]} ghost>
+    <NavMenuContainer expandIconPosition="right" defaultActiveKey={["0"]} ghost>
       {navMenuData.map((nav, key) =>
         nav._tag === navTags.NavItem ? (
           <React.Fragment key={key}>
