@@ -23,7 +23,7 @@ export const FooterIncContainer = styled.div`
   right: 24px;
 `;
 
-export const PegbLink = styled.a`
+export const PLink = styled.a`
   ${({ theme }) => theme.footer.inc.textStyle}
   font-weight: 500;
   text-decoration: underline;
@@ -31,7 +31,7 @@ export const PegbLink = styled.a`
 `;
 
 export const LogoText = styled.div`
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
   font-family: "Roboto";
   color: #bdbdbd;

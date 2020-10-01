@@ -45,7 +45,7 @@ const TableSection = ({ theme, tableData }) => {
               ptype="default"
               pname="Download CSV"
               psecondaryAlign="right"
-              psecondary={<i className="fa fa-upload" />}
+              psecondary={<i className="fa fa-download" />}
             />
           </CSVLink>
         </HeaderWrap>

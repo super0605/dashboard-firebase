@@ -2,13 +2,10 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { ThemeProvider } from "styled-components";
 import { Switch, Route, Redirect } from "react-router-dom";
-
 import AppLayout from "./Layout";
 import CSVUplaod from "./CSVUpload";
 import FinancialData from "./FinancialData";
 import NotFoundPage from "./NotFoundPage";
-import ElementsPage from "./ElementsPage";
-
 import themes from "../constants/theme";
 import routes from "../constants/routes";
 
@@ -32,7 +29,7 @@ const WithLayout = (Component, type) => (props) => (
  */
 const AuthenticatedRoute = ({ token, path, render, component, devMode = true, ...rest }) => {
   if (path === routes.HOME) {
-    return <Redirect to={routes.DBMANAGEMENT_CSV_UPLOAD} />;
+    return <Redirect to={routes.FINANCIAL_DATA} />;
   }
   return <Route {...rest} path={path} component={component} />;
 };
@@ -62,12 +59,6 @@ const AppRoutes = () => {
           exact
           path={routes.FINANCIAL_DATA}
           component={WithLayout(FinancialData)}
-          token={access_token}
-        />
-        <AuthenticatedRoute
-          exact
-          path={routes.ELEMENTS_PAGE}
-          component={WithLayout(ElementsPage)}
           token={access_token}
         />
         <AuthenticatedRoute

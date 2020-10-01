@@ -1,6 +1,6 @@
 import React from "react";
 import { withTheme } from "styled-components";
-import { FooterContainer, LogoContainer, FooterIncContainer, PegbLink, LogoText } from "./styled";
+import { FooterContainer, LogoContainer, FooterIncContainer, PLink, LogoText } from "./styled";
 
 const Footer = ({ theme }) => {
   return (
@@ -10,7 +10,7 @@ const Footer = ({ theme }) => {
       </LogoContainer>
       <FooterIncContainer>
         © 2020
-        <PegbLink>Test.</PegbLink>
+        <PLink>Test.</PLink>
         All Rights Reserved
       </FooterIncContainer>
     </FooterContainer>

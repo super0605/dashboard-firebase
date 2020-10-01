@@ -38,7 +38,7 @@ The architecture for this application can be broken down into the following:
 
 ## Start development server
 
-`$ yarn start`
+`$ yarn dev`
 
 That will open a browser tab with the app and will keep linter running in a loop.
 
