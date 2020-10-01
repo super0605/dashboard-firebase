@@ -15,3 +15,11 @@ export const TableWrap = styled.div`
   padding-top: ${({ theme }) => theme.spacings.spacing_l};
   overflow-x: auto;
 `;
+
+export const LoadingArea = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

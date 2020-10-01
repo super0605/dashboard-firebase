@@ -1,6 +1,6 @@
 import firebase from "../firebase";
 
-const db = firebase.ref("/funds");
+const db = firebase.ref("/test");
 
 const getAll = () => {
   return db;

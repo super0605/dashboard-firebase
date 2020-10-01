@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { withTheme } from "styled-components";
+import { Spin } from 'antd';
 import { CSVLink } from "react-csv";
 import PBox from "../../../../components/PBox";
 import PTable from "../../../../components/PTable";
 import PButtonSecondary from "../../../../components/PButtonSecondary";
-import { Container, HeaderWrap, SectionTitle, TableWrap } from "./styled";
+import { Container, HeaderWrap, SectionTitle, TableWrap, LoadingArea } from "./styled";
 import columns from "./_tableColumns";
 
 const TableSection = ({ theme, tableData }) => {
@@ -37,22 +38,29 @@ const TableSection = ({ theme, tableData }) => {
 
   return (
     <PBox padding={theme.spacings.spacing_xl}>
-      <Container>
-        <HeaderWrap>
-          <SectionTitle>FINANCIAL DATA</SectionTitle>
-          <CSVLink data={financialData}>
-            <PButtonSecondary
-              ptype="default"
-              pname="Download CSV"
-              psecondaryAlign="right"
-              psecondary={<i className="fa fa-download" />}
-            />
-          </CSVLink>
-        </HeaderWrap>
-        <TableWrap>
-          <PTable columns={columns} data={financialData} />
-        </TableWrap>
-      </Container>
+      {
+        financialData.length > 0 ?
+        <Container>
+          <HeaderWrap>
+            <SectionTitle>FINANCIAL DATA</SectionTitle>
+            <CSVLink data={financialData}>
+              <PButtonSecondary
+                ptype="default"
+                pname="Download CSV"
+                psecondaryAlign="right"
+                psecondary={<i className="fa fa-download" />}
+              />
+            </CSVLink>
+          </HeaderWrap>
+          <TableWrap>
+            <PTable columns={columns} data={financialData} />
+          </TableWrap>
+        </Container>:
+        <LoadingArea size="middle">
+          <Spin size="large" />
+        </LoadingArea>
+      }
+      
     </PBox>
   );
 };
