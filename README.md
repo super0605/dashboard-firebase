@@ -34,7 +34,7 @@ The architecture for this application can be broken down into the following:
 * Install __yarn__ 
 * Install project dependencies `$ yarn install`
 * Return to __project root folder__ `cd ..`
-* Start development server `$ yarn start`
+* Start development server `$ yarn dev`
 
 ## Start development server
 

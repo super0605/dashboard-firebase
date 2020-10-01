@@ -28,11 +28,13 @@ const FinancialData = () => {
   const makeFundData = (data) => {
     let result = [];
     data.map((row) => {
-      const fund = {
-        fund_id: row.fund_id,
-        fund_name: row.fund_name,
-      };
-      result.push(fund);
+      if (row.fund_id !== "fund_id") {
+        const fund = {
+          fund_id: row.fund_id,
+          fund_name: row.fund_name,
+        };
+        result.push(fund);
+      }
       return true;
     });
     setFundData(result);

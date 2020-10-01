@@ -53,7 +53,7 @@ const TableSection = ({ theme, tableData }) => {
             </CSVLink>
           </HeaderWrap>
           <TableWrap>
-            <PTable columns={columns} data={financialData} />
+            <PTable columns={columns} data={financialData} initialSize={10} />
           </TableWrap>
         </Container>:
         <LoadingArea size="middle">
