@@ -6,6 +6,7 @@ import { fundDataApi } from "../../../services";
 import { retriveData } from "../../../utils/helpers";
 
 const FinancialData = () => {
+  const [originalData, setOriginalData] = useState([]);
   const [tableData, setTableData] = useState([]);
   const [fundData, setFundData] = useState([]);
 
@@ -14,10 +15,10 @@ const FinancialData = () => {
       .getAllData()
       .then((res) => {
         const key = Object.keys(res)[0];
-        console.log(res[key]);
         makeFundData(res[key]);
         const data = retriveData(res[key]);
         setTableData(data);
+        setOriginalData(data);
       })
       .catch((e) => {
         console.log("error:", e);
@@ -41,7 +42,7 @@ const FinancialData = () => {
     if (currentFund.fund_id === "all") {
       getAllData();
     } else {
-      const data = tableData.filter((d) => {
+      const data = originalData.filter((d) => {
         return d.fund_id === currentFund.fund_id;
       });
       setTableData(data);
@@ -53,7 +54,6 @@ const FinancialData = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  console.log(tableData);
   return (
     <Container>
       <FilterSection fundData={fundData} handleCurrentFund={handleCurrentFund} />

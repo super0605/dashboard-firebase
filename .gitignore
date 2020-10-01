@@ -70,3 +70,4 @@ typings/
 env-config.js
 JenkinsfileForDelivery
 bitbucket-pipelines.yml
+*.cache
