@@ -25,7 +25,7 @@ The architecture for this application can be broken down into the following:
 
 * node (tested with 13.x.x or more, might work with others)
 * npm or yarn
-* Make sure you have added ssh keys to bitbucket
+
 
 ## Installation Steps
 
